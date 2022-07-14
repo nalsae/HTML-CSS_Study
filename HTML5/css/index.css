@@ -342,6 +342,27 @@ body{
   color: #ed552f;
 }
 
+/* 유효성 검사 배너 링크 그룹 */
+.validation-group{
+  margin-top: 20px;
+}
+
+.validation-link{
+  background: linear-gradient(rgb(192, 192, 192), rgb(247, 247, 247));
+  display: block;
+  padding: 10px 0 10px 45px;
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 20px;
+  font-weight: 600;
+  background-image: url('./images/validation_icon.png');;
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+}
+
+.validation-link:last-child{
+  margin-top: 10px;
+}
+
 /* 슬로건 */
 .slogan{
   background: lime;
