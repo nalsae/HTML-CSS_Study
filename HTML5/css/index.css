@@ -208,7 +208,7 @@ body{
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
   animation-direction: alternate; */
-  animation: fade-effec 2000ms infinite alternate;
+  animation: fade-effect 2000ms infinite alternate;
 }
 
 .visual::before{ 

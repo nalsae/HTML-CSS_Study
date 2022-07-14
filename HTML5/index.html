@@ -144,7 +144,23 @@
     </p>
   </div>
   <main class="main">
-    <div class="group group1">그룹1</div>
+    <div class="group group1">
+      <section class="login">
+        <h1>로그인</h1>
+        <form method="get" id="form-login">
+          <label>아이디
+            <input type="text" name="input_id" placeholder="이메일 주소"/>
+          </label>
+          <label>
+            비밀번호
+            <input type="text" name="input_pw" placeholder="8자리 이상"/>
+          </label>
+          <button type="submit" form="form-login">로그인</button>
+        </form>
+        <a href="/">회원가입</a>
+        <a href="/">아이디/비밀번호 찾기</a>
+      </section>
+    </div>
     <div class="group group2">그룹2</div>
     <div class="group group3">그룹3</div>
   </main>
