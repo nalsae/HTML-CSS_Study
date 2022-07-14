@@ -367,48 +367,61 @@ body{
 
 /* 웹 관련 용어 */
 .term{
-  background: silver linear-gradient(to bottom, silver, rgb(241, 241, 241));
   margin-top: 20px;
-  padding: 15px 15px 10px 15px;
+  background: silver linear-gradient(to bottom, #ccc, #aaa);
   border: 1px solid rgb(152, 152, 152);
   border-radius: 5px;
+  padding: 15px;
 }
 
 .term-title{
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-.term-list{
+.term-list div{
+  margin-top: 15px;
+  display: flow-root;
   margin-top: 10px;
 }
 
-.term-list > div{
-  display: flow-root;
+.term-list-subject{
+  float: right;
+  width: 140px;
+  color: #296897;
 }
 
 .term-list-thumbnail{
-  float: left;
+  position: relative;
+  top: 3px;
 }
 
-.term-list-subject, .term-list-brief{
-  float: top;
-}
-
-.term-list-subject{
-  font-size: 1.6rem;
-  color: rgb(55, 95, 138);
-  font-weight: 800;
-  padding-left: 70px;
+.term-list-thumbnail img{
+  vertical-align: top;
 }
 
 .term-list-brief{
+  width: 140px;
   margin-top: 5px;
   line-height: 1.5;
-  font-size: 1.4rem;
-  font-weight: 500;
-  word-break: keep-all;
-  padding-left: 10px;
+}
+
+.odd .term-list-subject, 
+.odd .term-list-brief{
+  float: right;
+}
+
+.even .term-list-subject, 
+.even .term-list-brief{
+  float: left;
+}
+
+.odd .term-list-thumbnail{
+  float: left;
+}
+
+.even .term-list-thumbnail{
+  float: right;
 }
 
 /* 슬로건 */
