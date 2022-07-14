@@ -182,13 +182,11 @@ body{
 }
 
 .visual{
-  background: pink;
   height: 120px;
   position: relative;
 }
 
 .visual-text{
-  background: lime;
   animation-name: move-effect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
@@ -223,9 +221,11 @@ body{
 }
 /* 메인 콘텐츠 */
 .main{
-  background: blue;
   display: flow-root;
+  background: #fff;
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
   /* overflow: hidden; */
   /* display: flex;
   flex-flow: row nowrap;
@@ -240,7 +240,6 @@ body{
 /* 그룹 */
 .group{
   float: left;
-  background: skyblue;
   margin: 0 15px;
 }
 
@@ -253,6 +252,55 @@ body{
 .group3{
   width: 190px;
 }
+
+/* 로그인 */
+.login{
+  background: orangered;
+  border-radius: 5px;
+}
+.login-title{
+  padding: 8px 0 0 16px;
+  color: yellow;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+#user_email, #user_pwd{
+  width: 100px;
+}
+.login-form{
+  min-height: 100px;
+}
+.login-form > fieldset{
+  margin: 8px;
+  padding: 10px;
+  background: #fff;
+  position: relative;
+  border-radius: 5px 5px 0 0;
+}
+.user-email{
+  margin-bottom: 8px;
+}
+.login-form > fieldset::after{
+  content: "";
+  height: 2px;
+  background: #000;
+}
+.login-button{
+  background: orangered;
+  width: 52px;
+  min-height: 54px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+.sign{
+  display: flex;
+  justify-content: space-around;
+}
+
 
 /* 슬로건 */
 .slogan{
