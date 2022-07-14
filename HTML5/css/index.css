@@ -255,52 +255,92 @@ body{
 
 /* 로그인 */
 .login{
-  background: orangered;
+  background: #e8852e radial-gradient(circle at right top, #e8852e, #ed552f);
   border-radius: 5px;
-}
-.login-title{
-  padding: 8px 0 0 16px;
-  color: yellow;
-  font-size: 1.6rem;
-  font-weight: 800;
-}
-#user_email, #user_pwd{
-  width: 100px;
-}
-.login-form{
-  min-height: 100px;
-}
-.login-form > fieldset{
-  margin: 8px;
   padding: 10px;
-  background: #fff;
-  position: relative;
-  border-radius: 5px 5px 0 0;
-}
-.user-email{
-  margin-bottom: 8px;
-}
-.login-form > fieldset::after{
-  content: "";
-  height: 2px;
-  background: #000;
-}
-.login-button{
-  background: orangered;
-  width: 52px;
-  min-height: 54px;
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-}
-.sign{
-  display: flex;
-  justify-content: space-around;
+  box-shadow: 5px 5px 0 0 #aaa;
 }
 
+.login-title{
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-indent: 10px;
+}
+
+.login-form{
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.login-form label{
+  width: 56px;
+  display: inline-block;
+}
+
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 2px 2px 2px .5em;
+}
+
+.login-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 53px;
+  padding: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #ed552f;
+  border: 0;
+  border-radius: 4px;
+}
+
+.login-form fieldset{
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
+.user-email{
+  margin-bottom: 5px;
+}
+
+.user-pwd{
+}
+
+
+.sign{
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+}
+
+.sign li:first-child{
+  float: left;
+}
+
+.sign li:last-child{
+  float: right;
+}
+
+.sign a{
+  display: block;
+  padding: 6px 0;
+  font-size: 1.3rem;
+  /* letter-spacing: -1px; */
+}
+
+.sign .icon-right-open::before{
+  color: #ed552f;
+}
 
 /* 슬로건 */
 .slogan{
