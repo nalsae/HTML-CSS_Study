@@ -367,11 +367,11 @@ body{
 
 /* 웹 관련 용어 */
 .term{
-  background: #ccc linear-gradient(to bottom, #ccc, #aaa);
+  background: silver linear-gradient(to bottom, silver, rgb(241, 241, 241));
   margin-top: 20px;
-  padding: 15px;
+  padding: 15px 15px 10px 15px;
+  border: 1px solid rgb(152, 152, 152);
   border-radius: 5px;
-  border: solid 1px rgb(135, 135, 135);
 }
 
 .term-title{
@@ -379,17 +379,36 @@ body{
   font-weight: 800;
 }
 
-.term-group{
+.term-list{
   margin-top: 10px;
-  display: flex;
 }
 
-.term-content{
-  margin-left: 10px;
+.term-list > div{
+  display: flow-root;
 }
 
-.term-content-title{
+.term-list-thumbnail{
+  float: left;
+}
+
+.term-list-subject, .term-list-brief{
+  float: top;
+}
+
+.term-list-subject{
   font-size: 1.6rem;
+  color: rgb(55, 95, 138);
+  font-weight: 800;
+  padding-left: 70px;
+}
+
+.term-list-brief{
+  margin-top: 5px;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  font-weight: 500;
+  word-break: keep-all;
+  padding-left: 10px;
 }
 
 /* 슬로건 */
