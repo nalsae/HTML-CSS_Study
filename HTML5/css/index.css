@@ -365,6 +365,33 @@ body{
   background-size: 12px 12px, 100%;
 }
 
+/* 웹 관련 용어 */
+.term{
+  background: #ccc linear-gradient(to bottom, #ccc, #aaa);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  border: solid 1px rgb(135, 135, 135);
+}
+
+.term-title{
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.term-group{
+  margin-top: 10px;
+  display: flex;
+}
+
+.term-content{
+  margin-left: 10px;
+}
+
+.term-content-title{
+  font-size: 1.6rem;
+}
+
 /* 슬로건 */
 .slogan{
   background: lime;
