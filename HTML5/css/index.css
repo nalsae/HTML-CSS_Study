@@ -459,8 +459,8 @@ body{
   border-radius: 4px;
 }
 
-/* 공지사항 및 자료실 */
-.board{
+/* 공지사항 및 자료실 마크업 쉬운 버전*/
+/* .board{
   position: relative;
   margin-top: 20px;
   height: initial;
@@ -495,10 +495,6 @@ body{
 
 .board-panel{
   display: none;
-  /* position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%; */
 }
 
 .board-section.is-select .board-panel{
@@ -536,6 +532,32 @@ body{
 
 .board-section.is-select .board-more{
   display: block !important;
+} */
+
+/* 공지사항 및 자료실 마크업 어려운 버전*/
+
+.tab-panel{
+  position: relative;
+  display: none;
+}
+
+.tab-panel.is-select .tap-panel > .board-list{
+  display: flex;
+}
+
+.board-list{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.board-list li{
+  width: 100%;
+}
+
+.board-more{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* 슬로건 */
