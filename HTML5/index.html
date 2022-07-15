@@ -152,11 +152,11 @@
           <fieldset>
             <legend>회원 로그인 폼</legend>
             <div class="user-email">
-              <label for="user-email">아이디</label>
+              <label for="user_email">아이디</label>
               <input type="email" id="user_email" required="required" placeholder="guest@zerobase.co.kr"/>
             </div>
             <div class="user-pwd">
-              <label for="user-pwd">비밀번호</label>
+              <label for="user_pwd">비밀번호</label>
               <input type="password" id="user_pwd" required="required" placeholder="8자리 이상"/>
             </div>
             <button type="submit" class="login-button">로그인</button>
@@ -176,8 +176,8 @@
           </a>
         </li>
         <li>
-          <a  href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer" title="CSS 유효성 검사 사이트로 이동(새창)">
-            CSS Vaidation Service
+          <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer" title="CSS 유효성 검사 사이트로 이동(새창)">
+          CSS Vaidation Service
           </a>
         </li>
       </ul>
@@ -210,7 +210,14 @@
         </dl>
       </section>
     </div>
-    <div class="group group2">그룹2</div>
+    <div class="group group2">
+      <h2 class="sr-only">검색</h2>
+      <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
+        <label for="data_search" class="icon-search">자료검색</label>
+        <input type="search" id="data_search" placeholder="검색어를 입력하세요." required="required" class="search-input"/>
+        <button type="submit" class="search-button">검색</button>
+      </form>
+    </div>
     <div class="group group3">그룹3</div>
   </main>
   <article class="slogan">슬로건</article>

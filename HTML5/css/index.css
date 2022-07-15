@@ -312,10 +312,6 @@ body{
   margin-bottom: 5px;
 }
 
-.user-pwd{
-}
-
-
 .sign{
   background: #fff;
   padding: 4px 10px;
@@ -422,6 +418,41 @@ body{
 
 .even .term-list-thumbnail{
   float: right;
+}
+
+/* 검색 폼 */
+.search-form{
+  background: silver linear-gradient(to bottom, rgb(189, 189, 189), rgb(238, 238, 238));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 10px 15px;
+  border: 1px solid #939393;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.icon-search{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.search-input{
+  width: 180px;
+  margin: 0 15px 0 15px;
+  padding: 3px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 3px;
+  font-size: 1.5rem;
+}
+
+.search-button{
+  background: #181818;
+  padding: 3px 8px;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 /* 슬로건 */
