@@ -42,22 +42,24 @@ body{
 
 /* 스킵 내비게이션 */
 /* .skip-nav{
-
-} */
-
-.skip-nav a{
-  padding: 4px 0;
-  display: none;
-  flex-flow: row nowrap;
+  display: block;
+  text-align: center;
   background: #000;
   color: #fff;
-  justify-content: center;
-  padding: 8px;
 }
 
-.skip-nav a:focus{
-  display: flex;
+.skip-nav span{
+  display: inline-block;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
 }
+
+.skip-nav:focus span{
+  height: auto;
+  padding: 8px;
+  box-shadow: 1px 1px 0 0 red, -1px -1px 0 0 red;
+} */
 
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
@@ -822,9 +824,40 @@ body{
 
 /* 슬로건 */
 .slogan{
-  background: lime;
-  clear: both;
+  display: flex;
+  position: relative;
+  background: #fff;
+  padding-top: 40px;
 }
+
+.slogan-title{
+  min-width: 110px;
+  min-height: 83px;
+  background-image: url(./images/coffee.png);
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  line-height: 83px;
+}
+
+.slogan-content{
+  width: 700px;
+  margin-left: 140px;
+  font-size: 1.5rem;
+  color: rgb(142, 83, 83);
+  min-height: 83px;
+  line-height: 1.5;
+}
+
+.slogan-content q::before{
+  font-size: 2.5rem;
+  padding-right: 5px;
+}
+
+.slogan-content q::after{
+  display: none;
+}
+
 /* 푸터 */
 .footer{
   background: purple;
