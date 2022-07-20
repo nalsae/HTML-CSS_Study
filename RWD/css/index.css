@@ -2,3 +2,128 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
+/* 공통 아이콘 (Font Awesome) */
+.far{
+  margin-right: var(--spacing-xs);
+}
+
+/* 모든 디바이스 (All Device) */
+/* 공통 로고 */
+.appHeader{
+  padding: var(--spacing-md);
+  position: relative;
+}
+
+.logo{
+  width: 12.75rem; /* 204px */
+  height: 3.687rem; /* 59px */
+}
+
+.logo__link{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./../images/webcafe-logo.png) no-repeat 0 0/100%;
+}
+
+.memberOnly{
+  display: flex;
+  position: absolute;
+  top: var(--spacing-base);
+  right: var(--spacing-base);
+}
+
+.memberOnly a{
+  padding: 0 var(--spacing-xs);
+}
+
+.searchForm__group{
+  display: flex;
+}
+
+.formInput{
+  width: 100%;
+}
+
+.formInput__input{
+  width: 100%;
+  padding: var(--spacing-xs);
+  border-radius: 5px;
+  border: 1px solid var(--silver)
+}
+
+.formInput__input::placeholder{
+  font-size: var( --text-sm);
+}
+
+.button--primary{
+  width: 64px;
+  margin-left: var(--spacing-xs);
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  font-size: var(--text-sm);
+  background-color: var(--secondary-color);
+}
+
+/* 모바일 디바이스 (Mobile Device) */
+@media (min-width: 320px) and (max-width: 767px) {
+  .appHeader{
+    background: var(--primary-color);
+  }
+
+  .logo{
+    margin-top: var(--spacing-xs);
+  }
+
+  .memberOnly{
+    color: #fff;
+    font-size: var( --text-sm);
+  }
+
+  .searchForm__group{
+    margin-top: var(--spacing-base);
+  }
+
+  .button--burger{
+    position: absolute;
+    top: 48px;
+    right: var(--spacing-base);
+    width: 32px;
+    height: 32px;
+  }
+
+
+}
+
+/* 데스크탑 디바이스 (Desktop Device) */
+@media (min-width: 768px) {
+
+  .searchForm__group{
+    position: absolute;
+    top: 54px;
+    right: var(--spacing-md);
+  }
+
+  .formInput__input{
+    width: 340px;
+  }
+
+  .button--primary{
+    margin: 0;
+  }
+
+  .button--burger{
+    display: none;
+  }
+
+}
+
+/* 고해상도 배경이미지 미디어쿼리 */
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+ {
+  .logo__link{
+    background-image: url(./../images/webcafe-logo@2x.png);
+  }
+}
