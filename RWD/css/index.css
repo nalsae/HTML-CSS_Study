@@ -164,7 +164,42 @@ input[type="search"]{
   color: var(--accent-twitter);
 }
 
+/* 공통 추천 서적 */
+.book{
+  background: pink;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
 
+.book__title{
+  align-self: flex-start;
+}
+
+.book__cover{
+  text-align: center;
+}
+
+.book__coverImage{
+  max-width: 80vw;
+}
+
+.book__coverCaption{
+  margin-top: var(--spacing-xs);
+}
+
+.book__info{
+  text-align: center;
+}
+
+.book__info dt, .book__info dd{
+  display: inline;
+}
+
+.ratingStar{
+  display: inline-block;
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 767px) {
