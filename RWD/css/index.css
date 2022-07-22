@@ -268,10 +268,6 @@ input[type="search"]{
 }
 
 /* 공통 트위터 */
-.twitter{
-  background: pink;
-}
-
 .twitter__userInfo{
   display: inline-flex;
   gap: var(--spacing-xs);
@@ -280,16 +276,25 @@ input[type="search"]{
 .twitter__userProfile{
   float: right;
   shape-outside: circle(50%);
-  width: 300px;
-  height: 300px;
+  width: 50px;
+  height: 50px;
+  max-width: 110px;
+  margin-left: 8px;
 }
 
 .twitter__userProfileImage{
   border: 1px solid var(--primary-color);
-  clip-path: circle(35%);
+  border-radius: 50%;
   vertical-align: top;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: right bottom;
+  object-position: 30% 40%;
+}
+
+.twitter__date{
+  display: block;
+  margin-top: var(--spacing-xs);
 }
 
 /* 모바일 디바이스 (Mobile Device) */
