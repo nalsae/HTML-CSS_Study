@@ -3,6 +3,7 @@
 
 // 헤더
 .appHeader{
+  position: relative;
   @include paddingX(24px);
   @include paddingY(16px);
   @include flexbox(column);
@@ -16,6 +17,19 @@
     background: $white;
     @include boxSizeMax;
     background: yellow;
+  }
+
+  .buttonWrapper{
+    @include mobile{
+      // 위치 지정
+      width: 32px;
+      height: 32px;
+      right: $spacing-lg;
+      @include posCenterY;
+    }
+    @include desktop{
+      display: none;
+    }
   }
 }
 
@@ -49,7 +63,7 @@
 // 검색 폼
 .searchForm{
   margin-top: rem(16px);
-  
+
   &__group{
     @include flexbox($j: flex-end);
   }

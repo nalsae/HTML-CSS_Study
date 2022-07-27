@@ -12,3 +12,33 @@
     color: $white;
   }
 }
+
+.button--burger{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: 0;
+  border: 0;
+
+  &BarTop, &BarMiddle, &BarBottom{
+    display: block;
+    width: 100%;
+    height: rem(6px);
+    background: $white;
+    border-radius: 10px;
+    @include pos($l: 0);
+  }
+
+  &BarTop{
+    top: 0;
+  }
+
+  &BarMiddle{
+    @include posCenterY;
+  }
+
+  &BarBottom{
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
