@@ -1,4 +1,6 @@
 @use "./utils" as *;
+@import '@euid/scss-mixins';
+@include normalize;
 
 .box {
   width: $w;
