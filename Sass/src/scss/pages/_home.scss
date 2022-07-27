@@ -1,60 +1,52 @@
 @use "./../utils" as *;
 
+
+[class*="__title"]{
+  @include flexbox(column, center);
+  @include textHeading(18px);
+  margin-bottom: $spacing-sm;
+}
+
+[class*="__summary"]{
+  @include textStyle(14px);
+}
+
 .home{
-  padding: $spacing-lg;
-  [class*="__title"]{
-    @include flexbox($d: column, $j: center);
-    font-weight: 700;
-    font-size: $text-md;
-    margin-bottom: $spacing-sm;
-  }
-  [class*="__enTitle"]{
-    font-weight: 400;
-    font-size: $text-base;
-  }
-  [class*="__summary"]{
-    margin-top: $spacing-md;
+  padding: rem(16px) rem(24px);
+
+  [class*="__title"] {
+    margin-bottom: rem(16px);
   }
 
   @include mobile{
     @include flexbox($d: column);
-    gap: $spacing-lg;
-    .news, .book, .board, .favorite, .twitter{
-      width: 100%;
+    gap: rem(16px);
+  }
+
+  @include desktop{
+    @include boxSizeMax;
+    @include gridbox;
+    grid-template-areas: "news news news news news news news news news news news news"
+    "book book book book favorite favorite favorite twitter twitter twitter twitter twitter"
+    "book book book book . board board board board board board board";
+    .news{
+      grid-area: news;
+    }
+  
+    .book{
+      grid-area: book;
+    }
+  
+    .board{
+      grid-area: board;
+    }
+  
+    .favorite{
+      grid-area: favorite;
+    }
+  
+    .twitter{
+      grid-area: twitter;
     }
   }
-}
-
-.book__cover{
-  display: block;
-  width: 70%;
-  @include autoMargin;
-  text-align: center;
-}
-
-.book__coverImage{
-  margin-bottom: $spacing-md;
-}
-
-.book__info{
-  margin-top: $spacing-md;
-  @include flexbox($d: column, $a: center);
-  gap: $spacing-sm;
-  dd:nth-child(1), dt:nth-child(2){
-    display: inline-block;
-  }
-}
-
-.ratingStar{
-  font-size: $text-xl;
-}
-
-.iframeWrapper{
-  @include responseIframe;
-}
-
-.news__date{
-  display: block;
-  text-align: right;
-  margin-top: $spacing-md;
 }

@@ -33,3 +33,13 @@ $colors: (
     $y: $y - 115px;
   }
 }
+
+// $accents: (
+//   "Book" : Book, "Board" : Board, "News" : News;
+// )
+
+// @each $accent in $accents{
+//   .accent#{$color} {
+//     color: "$accent-" + #{$accent};
+//   }
+// }
