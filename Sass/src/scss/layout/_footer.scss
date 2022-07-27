@@ -3,7 +3,7 @@
 .appFooter{
   background: $primary-color;
   color: $white;
-  padding: rem(24px) rem(18px);
+  padding: rem(24px);
 
   @include desktop{
     text-align: center;

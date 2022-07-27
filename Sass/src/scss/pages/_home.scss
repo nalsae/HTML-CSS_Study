@@ -13,6 +13,7 @@
 }
 
 .home{
+  @include boxSizeMax;
   padding: rem(16px) rem(24px);
 
   [class*="__title"] {
@@ -56,6 +57,10 @@
   @include responseIframe;
 }
 
+// .home > section, .home > article{
+//   @include flexbox(column);
+//   gap: rem(16px);
+// }
 
 .book {
   &__cover{
@@ -69,16 +74,19 @@
   }
 
   &__info{
+    @include marginY(16px);
+    dt:first-child{
+      margin-right: rem(8px);
+    }
+    @include flexbox($j: center, $w: wrap);
     text-align: center;
     margin-top: rem(16px);
   }
 
-  &__info dt:nth-child(1), &__info dd:nth-child(2){
-    display: inline-block;
-  }
-  
   .ratingStar{
-    font-size: rem(24px);
+    width: 100%;
+    text-align: center;
+    font-size: rem(32px);
   }
 }
 
@@ -134,10 +142,15 @@
   &__userProfile{
     float: right;
     shape-outside: circle(50%);
-    width: 50px;
-    height: 50px;
+    width: 20%;
+    height: 110px;
     max-width: 110px;
     margin-left: rem(8px);
+  }
+
+  &__userProfileImage{
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   &__date{
