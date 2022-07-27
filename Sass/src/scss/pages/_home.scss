@@ -9,6 +9,7 @@
 
 [class*="__summary"]{
   @include textStyle(14px);
+  margin-top: rem(16px);
 }
 
 .home{
@@ -48,5 +49,99 @@
     .twitter{
       grid-area: twitter;
     }
+  }
+}
+
+.iframeWrapper{
+  @include responseIframe;
+}
+
+
+.book {
+  &__cover{
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+  }
+
+  &__coverCaption{
+    margin-top: rem(16px);
+  }
+
+  &__info{
+    text-align: center;
+    margin-top: rem(16px);
+  }
+
+  &__info dt:nth-child(1), &__info dd:nth-child(2){
+    display: inline-block;
+  }
+  
+  .ratingStar{
+    font-size: rem(24px);
+  }
+}
+
+.news {
+  &__date{
+    display: block;
+    text-align: right;
+    margin-top: rem(12px);
+  }
+}
+
+.board {
+  position: relative;
+
+  &__item{
+    @include flexbox;
+    margin-top: rem(12px);
+  }
+
+  &__link{
+    flex-grow: 1;
+    @include textEllipsis;
+  }
+
+  &__more{
+    @include posRight(0, 0);
+    padding: rem(12px);
+    transform: translateX(rem(12px));
+  }
+}
+
+.favorite {
+  &__item{
+    margin-top: rem(12px);
+  }
+  
+  @include mobile{
+    &__link::after{
+      content: attr(data-tooltip);
+      color: $accent-favorite;
+      margin-left: rem(12px);
+      font-size: $text-sm;
+    }
+  }
+}
+
+.twitter {
+  &__userInfo{
+    display: inline-flex;
+    gap: rem(12px);
+  }
+
+  &__userProfile{
+    float: right;
+    shape-outside: circle(50%);
+    width: 50px;
+    height: 50px;
+    max-width: 110px;
+    margin-left: rem(8px);
+  }
+
+  &__date{
+    display: block;
+    margin-top: rem(12px);
   }
 }

@@ -419,6 +419,7 @@ iframe {
 [class*=__summary] {
   font-size: 0.875rem;
   letter-spacing: -0.02em;
+  margin-top: 1rem;
 }
 
 .home {
@@ -463,6 +464,100 @@ iframe {
   .home .twitter {
     grid-area: twitter;
   }
+}
+
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.book__cover {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.book__coverCaption {
+  margin-top: 1rem;
+}
+.book__info {
+  text-align: center;
+  margin-top: 1rem;
+}
+.book__info dt:nth-child(1), .book__info dd:nth-child(2) {
+  display: inline-block;
+}
+.book .ratingStar {
+  font-size: 1.5rem;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: 0.75rem;
+}
+
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  margin-top: 0.75rem;
+}
+.board__link {
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.board__more {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  padding: 0.75rem;
+  transform: translateX(0.75rem);
+}
+
+.favorite__item {
+  margin-top: 0.75rem;
+}
+@media (max-width: 767px) {
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: #eea60a;
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+.twitter__userInfo {
+  display: inline-flex;
+  gap: 0.75rem;
+}
+.twitter__userProfile {
+  float: right;
+  shape-outside: circle(50%);
+  width: 50px;
+  height: 50px;
+  max-width: 110px;
+  margin-left: 0.5rem;
+}
+.twitter__date {
+  display: block;
+  margin-top: 0.75rem;
 }
 
 .button {
@@ -689,6 +784,30 @@ iframe {
   .menu__link {
     padding: 0.5rem 0;
     border-bottom: 1px solid #767676;
+  }
+}
+
+.appFooter {
+  background: #38302e;
+  color: #fff;
+  padding: 1.5rem 1.125rem;
+}
+@media (min-width: 768px) {
+  .appFooter {
+    text-align: center;
+  }
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
   }
 }
 
