@@ -22,10 +22,8 @@
   .buttonWrapper{
     @include mobile{
       // 위치 지정
-      width: 32px;
-      height: 32px;
-      right: $spacing-lg;
-      @include posCenterY;
+      @include posRight(52px, 20px);
+      padding: rem(4px);
     }
     @include desktop{
       display: none;
