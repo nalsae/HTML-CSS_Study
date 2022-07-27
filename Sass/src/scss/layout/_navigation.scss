@@ -1,1 +1,45 @@
-// navigation.scss
+@use './../utils' as *;
+
+body{
+  position: relative;
+}
+
+.menu{
+  background: pink;
+  @include mobile{
+    position: absolute;
+    background: rgb(176, 176, 53);
+    opacity: 90%;
+    backdrop-filter: blur(30px);
+
+    @include pos;
+    width: 70%;
+    height: 100vh;
+    padding: $spacing-lg;
+
+    &__link{
+      display: block;
+      padding: $spacing-xs;
+      border-bottom: 1px solid rgb(95, 95, 95);
+      font-weight: 700;
+    }
+
+    &__item{
+      text-shadow: 1px 1px 5px $black;
+    }
+  }
+
+  @include desktop{
+    background: $secondary-color;
+    width: $container-width;
+    @include autoMargin;
+    &__list{
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-xl;
+      color: $white;
+      font-weight: 700;
+    }
+  }
+
+}

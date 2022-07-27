@@ -496,7 +496,6 @@ iframe {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    background: yellow;
   }
 }
 @media (max-width: 767px) {
@@ -575,6 +574,52 @@ iframe {
 }
 .searchForm .button--primary {
   margin-left: 1rem;
+}
+
+body {
+  position: relative;
+}
+
+.menu {
+  background: pink;
+}
+@media (max-width: 767px) {
+  .menu {
+    position: absolute;
+    background: rgb(176, 176, 53);
+    opacity: 90%;
+    backdrop-filter: blur(30px);
+    position: absolute;
+    top: initial;
+    left: initial;
+    width: 70%;
+    height: 100vh;
+    padding: 1.5rem;
+  }
+  .menu__link {
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(95, 95, 95);
+    font-weight: 700;
+  }
+  .menu__item {
+    text-shadow: 1px 1px 5px #000;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    background: #988574;
+    width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: #fff;
+    font-weight: 700;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
