@@ -1,1 +1,60 @@
-// home.scss
+@use "./../utils" as *;
+
+.home{
+  padding: $spacing-lg;
+  [class*="__title"]{
+    @include flexbox($d: column, $j: center);
+    font-weight: 700;
+    font-size: $text-md;
+    margin-bottom: $spacing-sm;
+  }
+  [class*="__enTitle"]{
+    font-weight: 400;
+    font-size: $text-base;
+  }
+  [class*="__summary"]{
+    margin-top: $spacing-md;
+  }
+
+  @include mobile{
+    @include flexbox($d: column);
+    gap: $spacing-lg;
+    .news, .book, .board, .favorite, .twitter{
+      width: 100%;
+    }
+  }
+}
+
+.book__cover{
+  display: block;
+  width: 70%;
+  @include autoMargin;
+  text-align: center;
+}
+
+.book__coverImage{
+  margin-bottom: $spacing-md;
+}
+
+.book__info{
+  margin-top: $spacing-md;
+  @include flexbox($d: column, $a: center);
+  gap: $spacing-sm;
+  dd:nth-child(1), dt:nth-child(2){
+    display: inline-block;
+  }
+}
+
+.ratingStar{
+  font-size: $text-xl;
+}
+
+.iframeWrapper{
+  @include responseIframe;
+}
+
+.news__date{
+  display: block;
+  text-align: right;
+  margin-top: $spacing-md;
+}

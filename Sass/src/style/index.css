@@ -403,11 +403,95 @@ iframe {
   background-position: 0 -460px;
 }
 
+.home {
+  padding: 1.5rem;
+}
+.home [class*=__title] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+.home [class*=__enTitle] {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.home [class*=__summary] {
+  margin-top: 1.25rem;
+}
+@media (max-width: 767px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+  .home .news, .home .book, .home .board, .home .favorite, .home .twitter {
+    width: 100%;
+  }
+}
+
+.book__cover {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.book__coverImage {
+  margin-bottom: 1.25rem;
+}
+
+.book__info {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+.book__info dd:nth-child(1), .book__info dt:nth-child(2) {
+  display: inline-block;
+}
+
+.ratingStar {
+  font-size: 1.5rem;
+}
+
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: 1.25rem;
+}
+
 .button {
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   height: 2rem;
   font-size: 0.875rem;
+  border: 0;
 }
 .button--none {
   border: 0;
@@ -610,7 +694,7 @@ iframe {
     align-items: stretch;
     flex-wrap: nowrap;
     color: #fff;
-    text-shadow: 1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
   }
 }
 .menu__item {
@@ -621,6 +705,12 @@ iframe {
   display: block;
   font-size: 1.125rem;
   font-weight: 700;
+}
+@media (max-width: 767px) {
+  .menu__link {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #767676;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -26,7 +26,7 @@
       @include boxSizeMax;
       @include flexbox($j: space-between);
       color: $white;
-      text-shadow: 1px 1px 0 $black;
+      text-shadow: 1px 1px 0 $black, -1px -1px 0 $black;
     }
   }
 
@@ -38,5 +38,10 @@
     display: block;
     font-size: rem(18px);
     font-weight: 700;
+    
+    @include mobile{
+      padding: $spacing-xs 0;
+      border-bottom: 1px solid $silver;
+    }
   }
 }
